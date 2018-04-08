@@ -24,7 +24,7 @@ public class JMSOrderPublisher {
 
 
     @Autowired
-    DecodeXML decodeXML;
+    private DecodeXML decodeXML;
 
     public void publishMessage(String tcpServerURL, String username, String password, boolean isQueue,
                                String nameOfDestination, List<Order> orders) throws JAXBException, JMSException, NamingException {

@@ -21,10 +21,10 @@ import java.io.InputStream;
 public class FileUploadController {
 
     @Autowired
-    JMSOrderPublisher dynPublisher;
+    private JMSOrderPublisher dynPublisher;
 
     @Autowired
-    DecodeXML decodeXML;
+    private DecodeXML decodeXML;
 
     @GetMapping("/")
     public String index() {
@@ -37,8 +37,6 @@ public class FileUploadController {
         InputStream is = null;
         try {
             if (!file.isEmpty()) {
-
-
                 is = file.getInputStream();
 
                 try {
@@ -49,9 +47,7 @@ public class FileUploadController {
                     return "redirect:/?success=false&error=" + errMsg;
                 }
                 return "redirect:/?success=true";
-
             } else {
-
                 return "redirect:/?success=false&error=EmptyFile";
             }
         } finally {
