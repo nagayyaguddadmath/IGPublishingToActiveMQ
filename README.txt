@@ -11,3 +11,11 @@ mvn  spring-boot:run
 
 Below is the link to test locally:
 http://localhost:8080/
+
+
+Please Note that this code is not production ready because of following reasons:
+1) Code is not Transactional
+2) Error handling should be improved
+3) performance can be improved by adding multi-threading publishing
+4) Logging can be added
+5) Integration tests
