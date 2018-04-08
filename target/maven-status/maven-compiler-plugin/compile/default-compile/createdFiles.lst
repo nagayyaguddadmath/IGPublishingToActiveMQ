@@ -1,0 +1,10 @@
+igorders\web\FileUploadController.class
+igorders\model\Orders.class
+igorders\publish\JMSDynamicPublisher.class
+igorders\XMLUtils\WSBuySaleAdapter.class
+igorders\model\Order.class
+igorders\IGPublishMain.class
+igorders\XMLUtils\DecodeXML.class
+igorders\XMLUtils\WSLongAdapter.class
+igorders\model\BuySale.class
+igorders\XMLUtils\WSIntegerAdapter.class
