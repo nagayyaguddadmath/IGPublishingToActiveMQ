@@ -100,6 +100,7 @@
     if(fail == -1) {
         divFail.style.display = "none";
     } else {
+        document.getElementById("failDiv").innerHTML = "Uploading file Failed..." + document.URL.substring(parseInt(document.URL.indexOf("error=")), document.URL.length);
         divFail.style.display = "block";
     }
 
