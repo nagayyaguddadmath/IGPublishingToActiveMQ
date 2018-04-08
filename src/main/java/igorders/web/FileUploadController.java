@@ -1,10 +1,7 @@
 package igorders.web;
 
-import java.io.IOException;
-import java.io.InputStream;
-
 import igorders.XMLUtils.DecodeXML;
-import igorders.publish.JMSDynamicPublisher;
+import igorders.publish.JMSOrderPublisher;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,51 +12,50 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.jms.JMSException;
+import javax.naming.NamingException;
 import javax.xml.bind.JAXBException;
+import java.io.IOException;
+import java.io.InputStream;
 
 @Controller
 public class FileUploadController {
 
     @Autowired
-    JMSDynamicPublisher dynPublisher;
+    JMSOrderPublisher dynPublisher;
 
     @Autowired
     DecodeXML decodeXML;
 
-	@GetMapping("/")
-	public String index() {
-		return "upload";
-	}
+    @GetMapping("/")
+    public String index() {
+        return "upload";
+    }
 
-	@RequestMapping(value = "/doUpload", method = RequestMethod.POST)
-	public String upload(@RequestParam MultipartFile file, String serverURL, String userName, String password, String destName, String type) throws IOException, JMSException {
+    @RequestMapping(value = "/doUpload", method = RequestMethod.POST)
+    public String upload(@RequestParam MultipartFile file, String serverURL, String userName, String password, String destName, String type) throws IOException, JMSException {
 
         InputStream is = null;
-		try {
+        try {
             if (!file.isEmpty()) {
 
 
-//			String fileName = file.getOriginalFilename();
-			is = file.getInputStream();
+                is = file.getInputStream();
 
                 try {
                     dynPublisher.publishMessage(serverURL, userName, password, type.equals("Queue"), destName, decodeXML.unmarshellOrdersSequentially(is));
-                } catch (JAXBException e) {
-                    return "redirect:/?success=false&error=" + e.getMessage();
+                } catch (JAXBException | NamingException e) {
+                    String errMsg = e.getMessage() == null ? e.toString() : e.getMessage();
+                    System.out.println(" Error occurred while processing order request: " + errMsg);
+                    return "redirect:/?success=false&error=" + errMsg;
                 }
-
-//			dynPublisher.publishMessage("tcp://localhost:61616", "admin","admin", false,"interview-2", "DynamiC Message Nagayya");
-			/*            Files.copy(is, Paths.get(path + fileName),
-                    StandardCopyOption.REPLACE_EXISTING);
-			 */
                 return "redirect:/?success=true";
 
             } else {
 
-                return "redirect:/?success=false";
+                return "redirect:/?success=false&error=EmptyFile";
             }
         } finally {
             IOUtils.closeQuietly(is);
         }
-	}
+    }
 }

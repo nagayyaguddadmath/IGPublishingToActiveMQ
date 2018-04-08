@@ -1,17 +1,15 @@
 package igorders.XMLUtils;
 
 import igorders.model.Order;
-import igorders.model.Orders;
 import org.springframework.stereotype.Component;
 
-import javax.xml.bind.*;
-import javax.xml.transform.stream.StreamSource;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import java.io.*;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-import java.util.stream.Collectors;
 
 /*
  * Reads Given is and returns the Orders
@@ -24,8 +22,7 @@ public class DecodeXML {
 
             List<Order> orders = new ArrayList<>();
             buffer.readLine();
-            while(buffer.ready())
-            {
+            while (buffer.ready()) {
                 String orderXMLLine = buffer.readLine();
                 orders.add(unmarshellOrdersByObject(orderXMLLine));
             }
@@ -33,7 +30,7 @@ public class DecodeXML {
         }
     }
 
-	public Order unmarshellOrdersByObject(String orderXMLLine) throws JAXBException{
+    public Order unmarshellOrdersByObject(String orderXMLLine) throws JAXBException {
         JAXBContext jaxbContext;
         Unmarshaller jaxbUnmarshaller = null;
 
@@ -41,30 +38,12 @@ public class DecodeXML {
             jaxbContext = JAXBContext.newInstance(Order.class);
             jaxbUnmarshaller = jaxbContext.createUnmarshaller();
             StringReader reader = new StringReader(orderXMLLine);
-//            jaxbUnmarshaller.unmarshal(inputStreamReader);
 
             return (Order) jaxbUnmarshaller.unmarshal(reader);
         } catch (JAXBException e) {
-            System.out.println("Error while Unmarshelling Orders from given file: " + e.getMessage());
-            throw e;
-        }
-
-    }
-
-    public Orders unmarshellOrders(InputStream inputStreamReader) throws JAXBException{
-        JAXBContext jaxbContext;
-        Unmarshaller jaxbUnmarshaller = null;
-
-        try {
-            jaxbContext = JAXBContext.newInstance(Orders.class);
-            jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-//            jaxbUnmarshaller.unmarshal(inputStreamReader);
-//            jaxbUnmarshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
-
-            JAXBElement<Orders> ordersRoot = (JAXBElement<Orders>)jaxbUnmarshaller.unmarshal(new StreamSource(inputStreamReader), Orders.class);
-            return ordersRoot.getValue();//ordersRoot.getOrders();
-        } catch (JAXBException e) {
-            System.out.println("Error while Unmarshelling Orders from given file" + e.getMessage());
+            System.out.println("Error while Unmarshelling Orders from given file: " +
+                    (e.getMessage() == null ? e.toString() : e.getMessage()));
+            System.out.println("Error - Looks like given input file format is wrong ");
             throw e;
         }
 

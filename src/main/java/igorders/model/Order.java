@@ -10,20 +10,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * Order model for Order details
  */
 @XmlRootElement(name = "Order")
-//@XmlAccessorType(XmlAccessType.FIELD)
-//@XmlAccessorType(XmlAccessType.PROPERTY)
 public class Order {
 
 
     public Order() {
 
-    };
+    }
 
     private String accountName;
     private long submittedAt;
     private long receivedAt;
     private String marketName;
-    private BuySale BuySale;
+    private BuySale buySale;
     private int size;
 
 
@@ -40,7 +38,7 @@ public class Order {
         return submittedAt;
     }
 
-    @XmlElement(type=Long.class, name = "SubmittedAt")
+    @XmlElement(type = Long.class, name = "SubmittedAt")
     public void setSubmittedAt(long submittedAt) {
         this.submittedAt = submittedAt;
     }
@@ -49,7 +47,7 @@ public class Order {
         return receivedAt;
     }
 
-    @XmlElement(type=Long.class, name = "ReceivedAt")
+    @XmlElement(type = Long.class, name = "ReceivedAt")
     public void setReceivedAt(long receivedAt) {
         this.receivedAt = receivedAt;
     }
@@ -67,36 +65,37 @@ public class Order {
         return size;
     }
 
-    @XmlElement(type=Integer.class, name = "size")
+    @XmlElement(type = Integer.class, name = "size")
     public void setSize(int size) {
         this.size = size;
     }
 
 
     public igorders.model.BuySale getBuySale() {
-        return BuySale;
+        return buySale;
     }
 
     @XmlElement(name = "action")
     @XmlJavaTypeAdapter(WSBuySaleAdapter.class)
     public void setBuySale(igorders.model.BuySale buySale) {
-        BuySale = buySale;
+        this.buySale = buySale;
     }
 
 
-    public Order(String accountName, long submittedAt, long receivedAt, String marketName, String buySale, int size) {
+    public Order(String accountName, long submittedAt, long receivedAt, String marketName, BuySale buySale, int size) {
         this.accountName = accountName;
         this.submittedAt = submittedAt;
         this.receivedAt = receivedAt;
         this.marketName = marketName;
-//        this.BuySale = BuySale.BUY.getBuySale().equals(buySale) ? BuySale.BUY : BuySale.SALE;
+        this.buySale = buySale;
         this.size = size;
     }
+
     ;
 
     @Override
     public String toString() {
         return "accountName:" + accountName + ", submittedAt: " + submittedAt + ", receivedAt: " + receivedAt +
-                ", marketName: " + marketName + ", size: " + size;
+                ", marketName: " + marketName + ", BuySale: " + buySale.getBuySale() + ", size: " + size;
     }
 }
