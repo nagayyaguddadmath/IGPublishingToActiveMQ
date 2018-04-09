@@ -1,6 +1,7 @@
 package igorders.web;
 
 import igorders.XMLUtils.DecodeXML;
+import igorders.domain.OrderProcessor;
 import igorders.publish.JMSOrderPublisher;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +21,9 @@ import java.io.InputStream;
 @Controller
 public class FileUploadController {
 
+    private static final String QUEUE = "Queue";
     @Autowired
-    private JMSOrderPublisher dynPublisher;
-
-    @Autowired
-    private DecodeXML decodeXML;
+    private OrderProcessor orderProcessor;
 
     @GetMapping("/")
     public String index() {
@@ -40,7 +39,7 @@ public class FileUploadController {
                 is = file.getInputStream();
 
                 try {
-                    dynPublisher.publishMessage(serverURL, userName, password, type.equals("Queue"), destName, decodeXML.unmarshellOrdersSequentially(is));
+                    orderProcessor.mapAndProcess(serverURL, userName, password, QUEUE.equals(type), destName, is);
                 } catch (JAXBException | NamingException e) {
                     String errMsg = e.getMessage() == null ? e.toString() : e.getMessage();
                     System.out.println(" Error occurred while processing order request: " + errMsg);

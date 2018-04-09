@@ -4,4 +4,5 @@ igorders\model\Order.class
 igorders\publish\JMSOrderPublisher.class
 igorders\IGPublishMain.class
 igorders\XMLUtils\DecodeXML.class
+igorders\domain\OrderProcessor.class
 igorders\model\BuySale.class
