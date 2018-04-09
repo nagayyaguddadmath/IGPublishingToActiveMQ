@@ -12,6 +12,8 @@ mvn  spring-boot:run
 Below is the link to test locally:
 http://localhost:8080/
 
+Below is the command to run all testcases
+mvn test
 
 Please Note that this code is not production ready because of following reasons:
 1) Code is not Transactional
