@@ -1,9 +1,0 @@
-igorders\web\FileUploadController.class
-igorders\XMLUtils\WSBuySaleAdapter.class
-igorders\model\Order.class
-igorders\AppConfig.class
-igorders\publish\JMSOrderPublisher.class
-igorders\IGPublishMain.class
-igorders\XMLUtils\DecodeXML.class
-igorders\domain\OrderProcessor.class
-igorders\model\BuySale.class
