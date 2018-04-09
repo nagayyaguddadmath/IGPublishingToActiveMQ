@@ -92,4 +92,9 @@ public class JMSOrderPublisher {
         return env;
     }
 
+    public void setDecodeXML(DecodeXML decodeXML) {
+        this.decodeXML = decodeXML;
+    }
+
+
 }

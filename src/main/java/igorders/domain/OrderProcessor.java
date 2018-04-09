@@ -31,4 +31,9 @@ public class OrderProcessor {
         dynPublisher.publishMessage(tcpServerURL, username, password, isQueue, nameOfDestination, orders);
 
     }
+
+    public void setDecodeXML(DecodeXML decodeXML) {
+        this.decodeXML = decodeXML;
+    }
+
 }
