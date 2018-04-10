@@ -14,7 +14,7 @@ Below is the command to run all testcases
 mvn test
 
 I have kept default bean scope as singleton as beans are stateless, But we can change it to prototype if needed.
-Assuming ActiveMQ is running at the given server and port.
+Assuming ActiveMQ is running at the given server and port. I have tested localhost activemq server (dont have remote MQ server)
 
 Please Note that this code is not production ready because of following reasons:
 1) Code is not Transactional

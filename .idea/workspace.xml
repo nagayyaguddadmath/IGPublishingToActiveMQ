@@ -4,16 +4,7 @@
     <list default="true" id="d15681cd-b7a0-45f4-a513-e879f959796f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/igorders/XMLUtils/DecodeXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/igorders/xmlutils/DecodeXML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/igorders/XMLUtils/WSBuySaleAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/igorders/xmlutils/WSBuySaleAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/igorders/domain/OrderProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/igorders/domain/OrderProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/igorders/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/igorders/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/igorders/publish/JMSOrderPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/igorders/publish/JMSOrderPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/igorders/web/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/igorders/webcontroller/FileUploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DecodeXMLJunitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DecodeXMLJunitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FileUploadJunitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FileUploadJunitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/JMSOrderPublisherJunitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/JMSOrderPublisherJunitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/OrderProcessorJunitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrderProcessorJunitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/igorders/webcontroller/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/igorders/webcontroller/FileUploadController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FileUploadController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileUploadController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/igorders/webcontroller/FileUploadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="110">
+              <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,14 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JMSOrderPublisher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/igorders/publish/JMSOrderPublisher.java">
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -56,8 +44,8 @@
       <file leaf-file-name="OrderProcessor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/igorders/domain/OrderProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+            <state relative-caret-position="156">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,6 +80,8 @@
       <find>module</find>
       <find>MockMultipartFile</find>
       <find>activemq</find>
+      <find>userna</find>
+      <find>UnknownHostException</find>
     </findStrings>
     <replaceStrings>
       <replace>Order</replace>
@@ -149,10 +139,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/igorders/XMLUtils/DecodeXML.java" />
         <option value="$PROJECT_DIR$/src/main/java/igorders/web/FileUploadController.java" />
-        <option value="$PROJECT_DIR$/README.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/igorders/domain/OrderProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/igorders/webcontroller/FileUploadController.java" />
         <option value="$PROJECT_DIR$/src/main/java/igorders/publish/JMSOrderPublisher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/igorders/domain/OrderProcessor.java" />
+        <option value="$PROJECT_DIR$/README.txt" />
       </list>
     </option>
   </component>
@@ -181,8 +171,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,7 +247,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="igorders" type="462c0819:PsiDirectoryNode" />
-              <item name="XMLUtils" type="462c0819:PsiDirectoryNode" />
+              <item name="xmlutils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IGPublishingToActiveMQ" type="b2602c69:ProjectViewProjectNode" />
@@ -278,6 +266,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -309,7 +299,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JMSOrderPublisherJunitTest">
+  <component name="RunManager" selected="Remote.publishDynamicMessages">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -498,9 +488,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestDecodeXMLJunit_testDecodeXMLMarshell - 2018.04.09 at 20h 25m 45s.xml">
-      <configuration name="TestDecodeXMLJunit.testDecodeXMLMarshell" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestDecodeXMLJunit - 2018.04.09 at 20h 25m 59s.xml">
       <configuration name="TestDecodeXMLJunit" configurationId="JUnit" />
     </history-entry>
@@ -528,6 +515,9 @@
     <history-entry file="JMSOrderPublisherJunitTest - 2018.04.09 at 20h 49m 17s.xml">
       <configuration name="JMSOrderPublisherJunitTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JMSOrderPublisherJunitTest - 2018.04.10 at 23h 50m 21s.xml">
+      <configuration name="JMSOrderPublisherJunitTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
@@ -535,6 +525,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32993197" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -552,14 +543,13 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37585035" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.37585035" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32993197" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32993197" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
@@ -605,12 +595,6 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/igorders/webcontroller/FileUploadController.java</url>
-          <line>38</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/igorders/publish/JMSOrderPublisher.java</url>
           <line>37</line>
           <properties />
@@ -633,12 +617,6 @@
           <line>78</line>
           <properties />
           <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/igorders/webcontroller/FileUploadController.java</url>
-          <line>45</line>
-          <properties />
-          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/igorders/TestPublishOrders.java</url>
@@ -712,8 +690,20 @@
           <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/igorders/webcontroller/FileUploadController.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/igorders/webcontroller/FileUploadController.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="39" />
+      <option name="time" value="41" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -954,16 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/JMSOrderPublisherJunitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/OrderProcessorJunitTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
@@ -1001,13 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="112" selection-start-line="15" selection-start-column="112" selection-end-line="15" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/igorders/xmlutils/DecodeXML.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -1040,8 +1013,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/igorders/domain/OrderProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        <state relative-caret-position="156">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1050,8 +1023,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/igorders/publish/JMSOrderPublisher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="172">
+          <caret line="29" column="128" lean-forward="true" selection-start-line="29" selection-start-column="128" selection-end-line="29" selection-end-column="128" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/JMSOrderPublisherJunitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1060,11 +1043,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/igorders/webcontroller/FileUploadController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="110">
+          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>

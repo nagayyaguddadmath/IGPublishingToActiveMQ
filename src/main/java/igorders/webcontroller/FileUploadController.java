@@ -15,6 +15,7 @@ import javax.naming.NamingException;
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.UnknownHostException;
 
 @Controller
 public class FileUploadController {
@@ -36,17 +37,15 @@ public class FileUploadController {
             if (!file.isEmpty()) {
                 is = file.getInputStream();
 
-                try {
-                    orderProcessor.mapAndProcess(serverURL, userName, password, QUEUE.equals(type), destName, is);
-                } catch (JAXBException | NamingException e) {
-                    String errMsg = e.getMessage() == null ? e.toString() : e.getMessage();
-                    System.out.println(" Error occurred while processing order request: " + errMsg);
-                    return "redirect:/?success=false&error=" + errMsg;
-                }
+                orderProcessor.mapAndProcess(serverURL, userName, password, QUEUE.equals(type), destName, is);
                 return "redirect:/?success=true";
             } else {
                 return "redirect:/?success=false&error=EmptyFile";
             }
+        } catch (JAXBException | NamingException | UnknownHostException e) {
+            String errMsg = e.getMessage() == null ? e.toString() : e.getMessage();
+            System.out.println(" Error occurred while processing order request: " + errMsg);
+            return "redirect:/?success=false&error=" + errMsg;
         } finally {
             IOUtils.closeQuietly(is);
         }
