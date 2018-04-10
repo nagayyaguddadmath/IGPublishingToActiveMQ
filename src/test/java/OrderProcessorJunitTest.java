@@ -1,15 +1,11 @@
-import igorders.AppConfig;
 import igorders.XMLUtils.DecodeXML;
 import igorders.domain.OrderProcessor;
 import igorders.publish.JMSOrderPublisher;
-import igorders.web.FileUploadController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestPropertySource;
 
 import javax.jms.JMSException;
 import javax.naming.NamingException;
@@ -17,8 +13,6 @@ import javax.xml.bind.JAXBException;
 import java.io.IOException;
 
 @RunWith(MockitoJUnitRunner.class)
-@ContextConfiguration(classes = {AppConfig.class})
-@TestPropertySource("classpath:application-test.properties")
 public class OrderProcessorJunitTest {
 
 

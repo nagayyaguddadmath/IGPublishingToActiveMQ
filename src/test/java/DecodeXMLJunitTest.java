@@ -1,4 +1,3 @@
-import igorders.AppConfig;
 import igorders.XMLUtils.DecodeXML;
 import igorders.model.BuySale;
 import igorders.model.Order;
@@ -6,16 +5,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestPropertySource;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
-@ContextConfiguration(classes = {AppConfig.class})
-@TestPropertySource("classpath:application-test.properties")
 public class DecodeXMLJunitTest {
 
     @InjectMocks

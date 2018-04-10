@@ -1,4 +1,3 @@
-import igorders.AppConfig;
 import igorders.domain.OrderProcessor;
 import igorders.web.FileUploadController;
 import org.apache.commons.io.IOUtils;
@@ -8,21 +7,13 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.mock.web.MockMultipartFile;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.jms.JMSException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 @RunWith(MockitoJUnitRunner.class)
-@ContextConfiguration(classes = {AppConfig.class})
-@TestPropertySource("classpath:application-test.properties")
 public class FileUploadJunitTest {
 
     @InjectMocks
