@@ -1,6 +1,6 @@
 package igorders.model;
 
-import igorders.XMLUtils.WSBuySaleAdapter;
+import igorders.xmlutils.WSBuySaleAdapter;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;

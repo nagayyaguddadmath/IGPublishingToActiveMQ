@@ -1,7 +1,7 @@
 package igorders.publish;
 
-import igorders.XMLUtils.DecodeXML;
 import igorders.model.Order;
+import igorders.xmlutils.DecodeXML;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-import igorders.XMLUtils.DecodeXML;
+import igorders.xmlutils.DecodeXML;
 import igorders.domain.OrderProcessor;
 import igorders.publish.JMSOrderPublisher;
 import org.junit.Test;

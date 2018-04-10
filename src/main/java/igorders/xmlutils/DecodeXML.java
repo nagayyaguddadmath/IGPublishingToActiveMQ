@@ -1,4 +1,4 @@
-package igorders.XMLUtils;
+package igorders.xmlutils;
 
 import igorders.model.Order;
 import org.springframework.stereotype.Component;
