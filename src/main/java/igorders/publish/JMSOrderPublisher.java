@@ -65,8 +65,11 @@ public class JMSOrderPublisher {
             session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             producer = session.createProducer(destination);
 
-            orders.forEach(order -> publishMessage(order, producer, session));
-
+            for (Order order : orders) {
+                TextMessage message = session.createTextMessage();
+                message.setText(decodeXML.marshellOrder(order));
+                producer.send(message);
+            }
         } catch (NamingException | JMSException e) {
             System.out.println(" Error occurred while publishing orders: " + e.getMessage());
             e.printStackTrace();
@@ -78,19 +81,6 @@ public class JMSOrderPublisher {
                 } catch (JMSException ignored) {
                 }
             }
-        }
-    }
-
-    private void publishMessage (Order order, MessageProducer producer, Session session) {
-        TextMessage message = null;
-        try {
-            message = session.createTextMessage();
-            message.setText(decodeXML.marshellOrder(order));
-            producer.send(message);
-        } catch (Exception e) {
-            System.out.println(" Error occurred while publishing orders: " + e.getMessage());
-            e.printStackTrace();
-            throw new RuntimeException(e);
         }
     }
 
