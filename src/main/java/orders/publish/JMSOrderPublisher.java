@@ -1,7 +1,7 @@
-package igorders.publish;
+package orders.publish;
 
-import igorders.model.Order;
-import igorders.xmlutils.DecodeXML;
+import orders.model.Order;
+import orders.xmlutils.DecodeXML;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

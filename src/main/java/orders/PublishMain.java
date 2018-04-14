@@ -1,13 +1,13 @@
-package igorders;
+package orders;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class IGPublishMain {
+public class PublishMain {
 
 	public static void main(String[] args) {
-		SpringApplication.run(IGPublishMain.class, args);
+		SpringApplication.run(PublishMain.class, args);
 	}
 
 }

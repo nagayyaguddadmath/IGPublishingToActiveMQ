@@ -1,9 +1,9 @@
-package igorders;
+package orders;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("igorders")
+@ComponentScan("orders")
 public class AppConfig {
 }

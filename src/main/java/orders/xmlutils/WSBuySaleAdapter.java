@@ -1,6 +1,6 @@
-package igorders.xmlutils;
+package orders.xmlutils;
 
-import igorders.model.BuySale;
+import orders.model.BuySale;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 

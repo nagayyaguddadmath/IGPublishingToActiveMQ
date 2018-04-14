@@ -1,5 +1,5 @@
-import igorders.domain.OrderProcessor;
-import igorders.webcontroller.FileUploadController;
+import orders.domain.OrderProcessor;
+import orders.webcontroller.FileUploadController;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,6 +1,6 @@
-package igorders.xmlutils;
+package orders.xmlutils;
 
-import igorders.model.Order;
+import orders.model.Order;
 import org.springframework.stereotype.Component;
 
 import javax.xml.bind.JAXBContext;

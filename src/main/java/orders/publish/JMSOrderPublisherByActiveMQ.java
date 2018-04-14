@@ -1,19 +1,15 @@
-package igorders.publish;
+package orders.publish;
 
-import igorders.model.Order;
-import igorders.xmlutils.DecodeXML;
+import orders.model.Order;
+import orders.xmlutils.DecodeXML;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.jms.*;
-import javax.naming.Context;
-import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.xml.bind.JAXBException;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Properties;
 
 @Component
 public class JMSOrderPublisherByActiveMQ {

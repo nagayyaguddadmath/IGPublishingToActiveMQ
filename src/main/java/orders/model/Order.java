@@ -1,6 +1,6 @@
-package igorders.model;
+package orders.model;
 
-import igorders.xmlutils.WSBuySaleAdapter;
+import orders.xmlutils.WSBuySaleAdapter;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -71,13 +71,13 @@ public class Order {
     }
 
 
-    public igorders.model.BuySale getBuySale() {
+    public orders.model.BuySale getBuySale() {
         return buySale;
     }
 
     @XmlElement(name = "action")
     @XmlJavaTypeAdapter(WSBuySaleAdapter.class)
-    public void setBuySale(igorders.model.BuySale buySale) {
+    public void setBuySale(orders.model.BuySale buySale) {
         this.buySale = buySale;
     }
 

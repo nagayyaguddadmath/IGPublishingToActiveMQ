@@ -1,7 +1,7 @@
-import igorders.xmlutils.DecodeXML;
-import igorders.model.BuySale;
-import igorders.model.Order;
-import igorders.publish.JMSOrderPublisher;
+import orders.xmlutils.DecodeXML;
+import orders.model.BuySale;
+import orders.model.Order;
+import orders.publish.JMSOrderPublisher;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

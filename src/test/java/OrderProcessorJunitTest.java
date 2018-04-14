@@ -1,6 +1,6 @@
-import igorders.xmlutils.DecodeXML;
-import igorders.domain.OrderProcessor;
-import igorders.publish.JMSOrderPublisher;
+import orders.xmlutils.DecodeXML;
+import orders.domain.OrderProcessor;
+import orders.publish.JMSOrderPublisher;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

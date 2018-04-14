@@ -1,4 +1,4 @@
-package igorders.model;
+package orders.model;
 
 public enum BuySale {
     BUY ("BUY"),
